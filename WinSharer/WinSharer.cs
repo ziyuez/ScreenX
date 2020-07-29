@@ -16,13 +16,13 @@ using System.Threading;
 
 namespace WinSharer
 {
-    public partial class WinSharer : Form
+    public partial class ScreenXSharePane : Form
     {
 
         protected RDPSession m_pRdpSession = null;
         protected bool ongoingSession = false;
 
-        public WinSharer()
+        public ScreenXSharePane()
         {
             InitializeComponent();
         }

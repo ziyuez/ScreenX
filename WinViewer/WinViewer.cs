@@ -14,9 +14,9 @@ using AxRDPCOMAPILib;
 
 namespace WinViewer
 {
-    public partial class WinViewer : Form
+    public partial class ScreenXViewPane : Form
     {
-        public WinViewer()
+        public ScreenXViewPane()
         {
             InitializeComponent();
         }

@@ -18,7 +18,7 @@ namespace WinViewer.exe
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new WinViewer());
+            Application.Run(new ScreenXViewPane());
         }
     }
 }

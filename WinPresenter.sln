@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30320.27
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1209
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinViewer", "WinViewer\WinViewer.csproj", "{11142972-1D43-4F0F-8511-E4046E6D03AE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenXView", "WinViewer\ScreenXView.csproj", "{11142972-1D43-4F0F-8511-E4046E6D03AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinSharer", "WinSharer\WinSharer.csproj", "{80929896-401C-4255-B43D-2EC47F13627C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenXShare", "WinSharer\ScreenXShare.csproj", "{80929896-401C-4255-B43D-2EC47F13627C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,14 @@
+C:\Users\ziz\ScreenX\WinViewer\obj\Debug\Interop.RDPCOMAPILib.dll
+C:\Users\ziz\ScreenX\WinViewer\obj\Debug\AxInterop.RDPCOMAPILib.dll
+C:\Users\ziz\ScreenX\WinViewer\obj\Debug\ScreenXView.csproj.ResolveComReference.cache
+C:\Users\ziz\ScreenX\WinViewer\obj\Debug\WinViewer.exe
+C:\Users\ziz\ScreenX\WinViewer\obj\Debug\WinViewer.pdb
+C:\Users\ziz\ScreenX\WinViewer\obj\Debug\ScreenXView.csprojAssemblyReference.cache
+C:\Users\ziz\ScreenX\WinViewer\bin\Debug\WinViewer.exe
+C:\Users\ziz\ScreenX\WinViewer\bin\Debug\WinViewer.pdb
+C:\Users\ziz\ScreenX\WinViewer\bin\Debug\Interop.RDPCOMAPILib.dll
+C:\Users\ziz\ScreenX\WinViewer\bin\Debug\AxInterop.RDPCOMAPILib.dll
+C:\Users\ziz\ScreenX\WinViewer\obj\Debug\WinViewer.ScreenXViewPane.resources
+C:\Users\ziz\ScreenX\WinViewer\obj\Debug\WinViewer.Properties.Resources.resources
+C:\Users\ziz\ScreenX\WinViewer\obj\Debug\ScreenXView.csproj.GenerateResource.cache
+C:\Users\ziz\ScreenX\WinViewer\obj\Debug\ScreenXView.csproj.CoreCompileInputs.cache

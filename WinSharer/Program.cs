@@ -18,7 +18,7 @@ namespace WinSharer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new WinSharer());
+            Application.Run(new ScreenXSharePane());
         }
     }
 }
