@@ -1,4 +1,5 @@
-# ScreenX
+![picture](/ScreenX_Logo2.png)
+
 A true cross-team cross-platform collaboration app, developed as a part of the 2020 Microsoft Hackathon. This is our latest working prototype.
 
 ## What is ScreenX?
