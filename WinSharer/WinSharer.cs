@@ -49,29 +49,33 @@ namespace WinSharer
 
         private void StartButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (m_pRdpSession == null)
+			if (!ongoingSession)
+			{
+                try
                 {
-                    m_pRdpSession = new RDPSession();
+                    if (m_pRdpSession == null)
+                    {
+                        m_pRdpSession = new RDPSession();
+                    }
+
+                    m_pRdpSession.OnAttendeeConnected += new _IRDPSessionEvents_OnAttendeeConnectedEventHandler(OnAttendeeConnected);
+                    m_pRdpSession.OnAttendeeDisconnected += new _IRDPSessionEvents_OnAttendeeDisconnectedEventHandler(OnAttendeeDisconnected);
+                    m_pRdpSession.OnControlLevelChangeRequest += new _IRDPSessionEvents_OnControlLevelChangeRequestEventHandler(OnControlLevelChangeRequest);
+                    var properties = m_pRdpSession.Properties;
+                    properties["EnableClipboardRedirect"] = true;
+                    SetSharingMode();
+
+                    m_pRdpSession.Open();
+                    IRDPSRAPIInvitation pInvitation = m_pRdpSession.Invitations.CreateInvitation("WinPresenter", "PresentationGroup", "", 5);
+                    string invitationString = pInvitation.ConnectionString;
+                    WriteToFile(invitationString);
+                    LogTextBox.Text += $"Presentation Started. {this.SharingModeComboBox.GetItemText(this.SharingModeComboBox.SelectedItem)} is being shared." + Environment.NewLine;
+                    ongoingSession = true;
                 }
-
-                m_pRdpSession.OnAttendeeConnected += new _IRDPSessionEvents_OnAttendeeConnectedEventHandler(OnAttendeeConnected);
-                m_pRdpSession.OnAttendeeDisconnected += new _IRDPSessionEvents_OnAttendeeDisconnectedEventHandler(OnAttendeeDisconnected);
-                m_pRdpSession.OnControlLevelChangeRequest += new _IRDPSessionEvents_OnControlLevelChangeRequestEventHandler(OnControlLevelChangeRequest);
-                var properties = m_pRdpSession.Properties;
-                //properties["SetClipboardRedirectCallback"] = 
-                properties["EnableClipboardRedirect"] = true;
-
-                m_pRdpSession.Open();
-                IRDPSRAPIInvitation pInvitation = m_pRdpSession.Invitations.CreateInvitation("WinPresenter","PresentationGroup","",5);
-                string invitationString = pInvitation.ConnectionString;
-                WriteToFile(invitationString);
-                LogTextBox.Text += $"Presentation Started. {this.SharingModeComboBox.GetItemText(this.SharingModeComboBox.SelectedItem)} is being shared." + Environment.NewLine;
-            }
-            catch (Exception ex)
-            {
-                LogTextBox.Text += "Error occured while starting presentation. Error: " + ex.ToString() + Environment.NewLine;
+                catch (Exception ex)
+                {
+                    LogTextBox.Text += "Error occured while starting presentation. Error: " + ex.ToString() + Environment.NewLine;
+                }
             }
         }
 
@@ -81,7 +85,6 @@ namespace WinSharer
             pAttendee.ControlLevel = RequestedLevel;
         }
 
-
         private void StopButton_Click(object sender, EventArgs e)
         {
             try
@@ -89,7 +92,8 @@ namespace WinSharer
                 m_pRdpSession.Close();
                 LogTextBox.Text += "Presentation Stopped." + Environment.NewLine;
                 Marshal.ReleaseComObject(m_pRdpSession);
-                m_pRdpSession = new RDPSession(); // set up new one so sharing mode can be set
+                m_pRdpSession = null;
+                ongoingSession = false;
             }
             catch (Exception ex)
             {
@@ -106,44 +110,39 @@ namespace WinSharer
 
         public void WriteToFile(string InviteString)
         {
-            //using (StreamWriter sw = File.CreateText("inv.xml"))
-            //{
-            //    sw.WriteLine (InviteString);
-            //}
             File.WriteAllText("inv.xml", InviteString);
-
         }
 
-		private void SharingModeComboBox_SelectedIndexChanged(object sender, EventArgs e)
-		{
+        public void SetSharingMode()
+        {
             string selected = this.SharingModeComboBox.GetItemText(this.SharingModeComboBox.SelectedItem);
 
-			if (selected.Equals("Desktop"))
-			{
+            if (selected.Equals("Desktop"))
+            {
                 Screen screen = Screen.FromControl(this);
                 m_pRdpSession.SetDesktopSharedRect(screen.Bounds.Left, screen.Bounds.Top, screen.Bounds.Right, screen.Bounds.Bottom);
-                LogTextBox.Text += ($"Sharing desktop: {screen.Bounds.Left}, {screen.Bounds.Top}, {screen.Bounds.Right}, {screen.Bounds.Bottom}" + Environment.NewLine);
+                LogTextBox.Text += ($"Sharing desktop: {this.LogicalToDeviceUnits(screen.Bounds.Left)}, {this.LogicalToDeviceUnits(screen.Bounds.Top)}, {this.LogicalToDeviceUnits(screen.Bounds.Right)}, {this.LogicalToDeviceUnits(screen.Bounds.Bottom)}" + Environment.NewLine);
             }
             else
-			{
+            {
                 m_pRdpSession.ApplicationFilter.Enabled = true;
 
                 var applications = m_pRdpSession.ApplicationFilter.Applications;
-                foreach(var appObj in applications)
-				{
+                foreach (var appObj in applications)
+                {
                     RDPSRAPIApplication app = appObj as RDPSRAPIApplication;
-					if (!string.IsNullOrEmpty(app.Name) && app.Name.Equals(selected))
-					{
+                    if (!string.IsNullOrEmpty(app.Name) && app.Name.Equals(selected))
+                    {
                         app.Shared = true;
                     }
                 }
             }
-
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
+
     }
 }

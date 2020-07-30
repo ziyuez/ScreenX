@@ -21,11 +21,11 @@ namespace WinViewer
             InitializeComponent();
         }
 
-		private void PRdpViewer_OnSharedRectChanged(object sender, _IRDPSessionEvents_OnSharedRectChangedEvent e)
-		{
-            LogTextBox.Text += ($"onsharedrectchanged: neww left {e.left}, {e.top}, {e.right}, {e.bottom}" + Environment.NewLine);
-            pRdpViewer.SetBounds(e.left, e.top, e.right, e.bottom);
-		}
+		//private void PRdpViewer_OnSharedRectChanged(object sender, _IRDPSessionEvents_OnSharedRectChangedEvent e)
+		//{
+  //          LogTextBox.Text += ($"onsharedrectchanged: neww left {e.left}, {e.top}, {e.right}, {e.bottom}" + Environment.NewLine);
+  //          pRdpViewer.SetBounds(e.left, e.top, e.right, e.bottom);
+		//}
 
 		private void ConnectButton_Click(object sender, EventArgs e)
         {
@@ -90,10 +90,6 @@ namespace WinViewer
         private void OnConnectionEstablished(object sender, EventArgs e)
         {
             LogTextBox.Text += "Connection Established" + Environment.NewLine;
-            //this.pRdpViewer.SmartSizing = true;
-            //this.Size = new System.Drawing.Size(Screen.PrimaryScreen.WorkingArea.Width - 10, Screen.PrimaryScreen.WorkingArea.Height - 10);
-            //this.ClientSize = new System.Drawing.Size(Screen.PrimaryScreen.WorkingArea.Width - 10, Screen.PrimaryScreen.WorkingArea.Height - 10);
-
         }
 
         private void OnError(object sender, _IRDPSessionEvents_OnErrorEvent e)
