@@ -61,3 +61,5 @@ If your ScreenX View Pane is displaying a connection error in the dialog box in 
 
 #### I can only see part of my companion's shared application!
 The application that is being shared must be in the foreground on the sharer's screen. Ensure that no other app is open on top of the shared application. Additionally, we recommend setting up the shared application on the left half of the sharer's screen and the ScreenX View Pane on the right half of the screen. Due to variations in sizing and resolution on laptops and PCs, keeping your shared application on the left half of your screen will ensure that your ScreenX companion can see your actions at all times.
+
+![picture](/Annotation 2020-07-29 201232.png)
