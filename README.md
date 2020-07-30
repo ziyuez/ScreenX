@@ -28,7 +28,9 @@ This ScreenX prototype supports the following operating systems: Windows 10, Win
 
 3. Download or clone this repository to both local machines.
 
-4. The following steps are broken down into "sharer" and "viewer" steps. Please note that each PC will host one Share Pane (to share its own application) and one View Pane (to view the other PC's application) for the full ScreenX experience; hence, each PC will take a turn walking through the "sharer" and "viewer" steps.
+4. The following steps are broken down into "sharer" and "viewer" steps. Please note that each PC will host one Share Pane (to share its own application) and one View Pane (to view the other PC's application) for the full ScreenX experience; hence, each PC will take a turn walking through the "sharer" and "viewer" steps. Your final setup will look something like this: 
+
+![picture](img/finalSetupGraphic.PNG)
 
 #### PC 1: Sharer
 5. Prior to launching the Share Pane, make sure that the application you would like to share is open and visible on your PC screen.
