@@ -33,7 +33,7 @@ This ScreenX prototype supports the following operating systems: Windows 10, Win
 ![picture](img/finalSetupGraphic.PNG)
 
 #### PC 1: Sharer
-5. Prior to launching the Share Pane, make sure that the application you would like to share is open and visible on your PC screen.
+5. Prior to launching the Share Pane, make sure that the application you would like to share is open and visible on your PC screen. It must be in the foreground at all times.
 
 6. Inside the ScreenX repository, navigate to WinSharer->bin->Debug. Double click on the file named "WinSharer.exe". This will launch the ScreenX Share Pane application.
 
