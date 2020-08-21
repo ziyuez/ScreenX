@@ -55,11 +55,21 @@ This ScreenX prototype supports the following operating systems: Windows 10, Win
 13. In the ScreenX View Pane application, click the Connect button. After a moment, you will begin to see the application shared by your ScreenX companion PC.
 
 #### Finishing Up
-10. Repeat steps 5-13 on the other PC to establish two remote sessions on each machine, with one Share Pane and one View Pane each. Congratulations, you now have a working ScreenX setup!
+14. Repeat steps 5-13 on the other PC to establish two remote sessions on each machine, with one Share Pane and one View Pane each. 
 
-11. In order to take control of your companion's shared application, click the Control ScreenX in the ScreenX View Pane. Alternatively, for a smoother experience, you can also move your mouse off your screen and onto your companion's screen to take advantage of Mouse Without Border's capabilities. Through the ScreenX View Pane, you will be able to see your mouse on your companion's shared application to perform actions on that application.
+![picture](img/invFile2.png)
 
-12. To copy and paste text, images, and files, move your mouse onto your companion's shared application and copy to clipboard. Simply navigate your mouse back to your screen to paste in your own application.
+15. Congratulations, you now have a working ScreenX setup!
+
+16. In order to take control of your companion's shared application, click the Control ScreenX in the ScreenX View Pane. Alternatively, for a smoother experience, you can also move your mouse off your screen and onto your companion's screen to take advantage of Mouse Without Border's capabilities. Through the ScreenX View Pane, you will be able to see your mouse on your companion's shared application to perform actions on that application.
+
+17. To copy and paste text, images, and files, move your mouse onto your companion's shared application and copy to clipboard. Simply navigate your mouse back to your screen to paste in your own application.
+
+## ScreenX V2 Setup
+
+![picture](img/idealSetupGraphic.png)
+
+The ultimate goal of ScreenX is to enable all parties using the application to see the same monitor perspective. Currently, the beta version works best with the recommended setup as you see in Step 4 of the Installation section, but our team is working hard to enable the ideal setup as you see in the image above in ScreenX V2. If you'd like to experience a setup identical to the one above, simply swap the view and share panes on one of your PCs. Please note that you may need to use the view pane scroll bar to make the shared application visible. 
 
 ## Troubleshooting and FAQs
 #### My ScreenX View Pane is failing to connect!
