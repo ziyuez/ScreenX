@@ -22,7 +22,7 @@ This ScreenX prototype supports the following operating systems: Windows 10, Win
 ## Getting Started
 #### Installation & Setup
 
-1. Double check to ensure that both PCs that will run ScreenX are on the same wireless/wired network and that neither PC is running on a VPN.
+1. Double check to ensure that both PCs that will run ScreenX are on the same wireless/wired network and that **neither PC** is running on a VPN.
 
 2. Head to https://www.microsoft.com/en-us/download/details.aspx?id=35460 to download Mouse Without Borders, a Microsoft Garage project by Truong Do, on both ScreenX PCs. Follow the installation and setup instructions, and enable the Mouse Without Borders connection.
 
@@ -52,7 +52,7 @@ This ScreenX prototype supports the following operating systems: Windows 10, Win
 
 12. Navigate back to your File Explorer and in the Debug folder, double click on the file named "WinViewer.exe". This will launch the ScreenX View Pane application.
 
-13. In the ScreenX View Pane application, click the Connect button. After a moment, you will begin to see the application shared by your ScreenX companion PC.
+13. In the ScreenX View Pane application, click the Connect button. After a moment, you will begin to see the application shared by your ScreenX companion PC. The shared application must be in the foreground **at all times** or it will be shown as a black screen in the View Pane.
 
 #### Finishing Up
 14. Repeat steps 5-13 on the other PC to establish two remote sessions on each machine, with one Share Pane and one View Pane each. 
@@ -69,13 +69,13 @@ This ScreenX prototype supports the following operating systems: Windows 10, Win
 
 ![picture](img/idealSetupGraphic.png)
 
-The ultimate goal of ScreenX is to enable all parties using the application to see the same monitor perspective. Currently, the beta version works best with the recommended setup as you see in Step 4 of the Installation section, but our team is working hard to enable the ideal setup as you see in the image above in ScreenX V2. If you'd like to experience a setup identical to the one above, simply swap the view and share panes on one of your PCs. Please note that you may need to use the view pane scroll bar to make the shared application visible. 
+The ultimate goal of ScreenX is to enable all parties using the application to see the same monitor perspective. Currently, the beta version works best with the recommended setup as you see in Step 4 of the Installation section, but our team is working hard to enable the ideal setup as you see in the image above in ScreenX V2. If you'd like to experience a setup identical to the one above, simply swap the view and share panes on one of your PCs. Please note that you may need to use the View Pane scroll bar to make the shared application visible. 
 
 ## Troubleshooting and FAQs
 #### My ScreenX View Pane is failing to connect!
 If your ScreenX View Pane is displaying a connection error in the dialog box in the upper right corner:
 - Double check to ensure you have copied and saved the exact contents of the inv.xml file from your companion PC's ScreenX Share Pane folder. You can alternatively paste the contents of the inv.xml file from the Share Pane into a messaging application in case the Mouse Without Borders shared clipboard is inoperable.
-- Open both PC's WiFi settings and ensure that they match. You should also verify that neither PC is connected to a VPN.
+- Open both PC's WiFi settings and ensure that they match. You should also verify that **neither PC** is connected to a VPN.
 
 #### I can only see part of my companion's shared application!
 The application that is being shared must be in the foreground on the sharer's screen. Ensure that no other app is open on top of the shared application. Additionally, we recommend setting up the shared application on the left half of the sharer's screen and the ScreenX View Pane on the right half of the screen. Due to variations in sizing and resolution on laptops and PCs, keeping your shared application on the left half of your screen will ensure that your ScreenX companion can see your actions at all times.
